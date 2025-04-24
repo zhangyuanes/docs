@@ -19,7 +19,7 @@ npm i -g mintlify
 Run the following command at the root of your documentation (where docs.json is)
 
 ```
-mintlify dev
+mintlify dev --port 3000
 ```
 
 ### Publishing Changes
