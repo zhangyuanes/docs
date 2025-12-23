@@ -1,97 +1,92 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: '快速开始'
+description: '在 5 分钟内开始构建出色的文档'
 ---
 
-## Setup your development
+## 设置您的开发环境
 
-Learn how to update your docs locally and deploy them to the public.
+了解如何在本地更新您的文档并将其部署到公共环境。
 
-### Edit and preview
+### 编辑和预览
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
+  <Accordion icon="github" title="在本地克隆您的文档">
+    在入门过程中，我们在您的 Github 上创建了一个包含您文档内容的仓库。您可以在我们的
+    [仪表板](https://dashboard.mintlify.com) 上找到此仓库。要在本地克隆仓库，请在终端中按照这些
+    [说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    操作。
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 
-    1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `docs.json` is): ``` mintlify dev ```
+  <Accordion icon="rectangle-terminal" title="预览更改">
+    预览可以帮助您确保更改看起来符合预期。我们构建了一个命令行界面来在本地渲染这些更改。 
+    1. 安装
+    [Mintlify CLI](https://www.npmjs.com/package/mintlify) 以在本地预览
+    文档更改，使用此命令：``` npm i -g mint ```
+    2. 在文档的根目录（`docs.json` 所在的位置）运行以下命令：``` mint dev ```
     <Note>
-      If you’re currently using the legacy ```mint.json``` configuration file, please update the Mintlify CLI:
+      如果您当前使用的是旧版 ```mint.json``` 配置文件，请更新 Mintlify CLI：
 
 
       ```npm i -g mintlify@latest```
-      And run the new upgrade command in your docs repository:
+      并在您的文档仓库中运行新的升级命令：
 
       ```mintlify upgrade```
-      You should now be using the new ```docs.json``` configuration file. Feel free to delete the ```mint.json``` file from your repository.
+      您现在应该使用新的 ```docs.json``` 配置文件。可以随时从您的仓库中删除 ```mint.json``` 文件。
     </Note>
   </Accordion>
 </AccordionGroup>
 
-### Deploy your changes
+### 部署您的更改
 
 <AccordionGroup>
 
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
+<Accordion icon="message-bot" title="安装我们的 Github 应用">
+  我们的 Github 应用会自动将您的更改部署到您的文档站点，因此您
+  不需要自己管理部署。您可以在
+  [仪表板](https://dashboard.mintlify.com) 上找到安装链接。一旦机器人成功
+  安装，仓库的提交哈希旁边应该会有一个复选标记。
 </Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
+<Accordion icon="rocket" title="推送您的更改">
+  [将您的更改提交并推送到
   Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
+  以便在您的文档站点中更新更改。如果您推送后没有看到
+  Github 应用成功部署您的更改，您也可以通过我们的 [仪表板](https://dashboard.mintlify.com) 手动
+  更新您的文档。
 </Accordion>
 
 </AccordionGroup>
 
-## Update your docs
+## 更新您的文档
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+使用 MDX 语法和 React 组件直接在文件中添加内容。您可以使用我们的任何组件，甚至可以构建自己的组件。
 
 <CardGroup>
 
-<Card title="Add Content With MDX" icon="file" href="/essentials/markdown">
-  Add content to your docs with MDX syntax.
+<Card title="使用 MDX 添加内容" icon="file" href="/essentials/markdown">
+  使用 MDX 语法向您的文档添加内容。
 </Card>
 
 <Card
-  title="Add Code Blocks"
+  title="添加代码块"
   icon="square-code"
   href="/essentials/code"
 >
-  Add code directly to your docs with syntax highlighting.
+  使用语法高亮直接在文档中添加代码。
 </Card>
 
 <Card
-  title="Add Images"
+  title="添加图片"
   icon="image"
   href="/essentials/images"
 >
-  Add images to your docs to make them more engaging.
+  在文档中添加图片，使其更具吸引力。
 </Card>
 
 <Card
-  title="Add Custom Components"
+  title="添加自定义组件"
   icon="puzzle-piece"
   href="/essentials/reusable-snippets"
 >
-  Add templates to your docs to make them more reusable.
+  在文档中添加模板，使其更具可重用性。
 </Card>
 
 </CardGroup>

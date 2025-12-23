@@ -1,16 +1,16 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
+title: '导航'
+description: 'docs.json 中的 navigation 字段定义了导航菜单中的页面'
 icon: 'map'
 ---
 
-The navigation menu is the list of links on every website.
+导航菜单是每个网站上的链接列表。
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
+每次添加新页面时，您可能需要更新 `docs.json`。页面不会自动显示。
 
-## Navigation syntax
+## 导航语法
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+我们的导航语法是递归的，这意味着您可以创建嵌套的导航组。您不需要在页面名称中包含 `.mdx`。
 
 <CodeGroup>
 
@@ -54,15 +54,15 @@ Our navigation syntax is recursive which means you can make nested navigation gr
 
 </CodeGroup>
 
-## Folders
+## 文件夹
 
-Simply put your MDX files in folders and update the paths in `docs.json`.
+只需将您的 MDX 文件放在文件夹中，并更新 `docs.json` 中的路径。
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+例如，要在 `https://yoursite.com/your-folder/your-page` 有一个页面，您需要创建一个名为 `your-folder` 的文件夹，其中包含一个名为 `your-page.mdx` 的 MDX 文件。
 
 <Warning>
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+除非您将其嵌套在另一个文件夹中，否则不能使用 `api` 作为文件夹名称。Mintlify 使用 Next.js，它保留顶级 `api` 文件夹用于内部服务器调用。像 `api-reference` 这样的文件夹名称将被接受。
 
 </Warning>
 
@@ -82,6 +82,6 @@ You cannot use `api` for the name of a folder unless you nest it inside another 
 }
 ```
 
-## Hidden Pages
+## 隐藏页面
 
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+未包含在 `docs.json` 中的 MDX 文件不会显示在侧边栏中，但可以通过搜索栏和直接链接访问它们。

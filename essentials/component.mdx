@@ -1,0 +1,62 @@
+---
+title: '组件库'
+description: '组件库一览'
+icon: 'diamonds-4'
+---
+
+用于布局、强调、API 文档和导航的组件库。
+
+## 折叠面板
+
+<Accordion title="我是一个折叠面板。" defaultOpen={true} icon="java">
+  您可以在这里放置任何内容，包括其他组件，比如代码：
+
+   ```java HelloWorld.java
+    class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+  ```
+</Accordion>
+
+```md
+<Accordion title="我是一个折叠面板。" defaultOpen={true} icon="java">
+  您可以在这里放置任何内容，包括其他组件，比如代码
+</Accordion>
+```
+
+
+## 折叠面板分组
+
+使用 `<AccordionGroup>` 将相关折叠面板组合在一起。这样可构成一个连贯的区块，每个面板都可单独展开或收起。
+
+<AccordionGroup>
+  <Accordion title="入门指南" icon="circle-play">
+    您可以在折叠面板内放置其他组件。
+  </Accordion>
+
+  <Accordion title="高级功能" icon="alien-8bit">
+    添加图标可以让折叠面板更具视觉区分度和易于浏览。
+  </Accordion>
+
+  <Accordion title="故障排除" icon="circle-exclamation">
+    将相关内容组织成组。
+  </Accordion>
+</AccordionGroup>
+
+```md
+<AccordionGroup>
+  <Accordion title="入门指南" icon="circle-play">
+    您可以在折叠面板内放置其他组件。
+  </Accordion>
+
+  <Accordion title="高级功能" icon="alien-8bit">
+    添加图标可以让折叠面板更具视觉区分度和易于浏览。
+  </Accordion>
+
+  <Accordion title="故障排除" icon="circle-exclamation">
+    将相关内容组织成组。
+  </Accordion>
+</AccordionGroup>
+```
