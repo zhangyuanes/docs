@@ -1,0 +1,60 @@
+---
+title: 'API'
+description: 'API 接口文档相关组件'
+icon: 'file-brackets-curly'
+---
+
+## 可展开项
+
+> 切换显示嵌套属性
+
+使用可展开项在响应字段中显示或隐藏嵌套内容。可展开项对在 API 文档中展示复杂对象属性尤其有用。
+
+<ResponseField name="user" type="User Object">
+  <Expandable title="properties">
+    <ResponseField name="full_name" type="string">
+      用户的姓名
+    </ResponseField>
+
+    <ResponseField name="is_over_21" type="boolean">
+      用户是否已满 21 岁
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+## 字段
+
+> 使用类型信息为 API 请求和响应的参数编写文档。
+
+使用字段为 API 的参数与响应编写文档。字段分为两类：参数字段和响应字段。
+
+
+### 参数字段
+
+`<ParamField>` 组件用于为你的 API 或 SDK 定义参数。
+
+<ParamField path="param" type="string" required default="any_value" deprecated>
+  参数字段示例，默认值为 any_value，已废弃。
+</ParamField>
+
+### 响应字段
+
+`<ResponseField>` 组件用于定义 API 的返回值。
+
+<ResponseField name="response" type="string" default="any_value" required>
+  响应字段示例，默认值为 any_value，必填。
+</ResponseField>
+
+## Frames
+
+> 通过为图像和其他组件添加样式化边框来增强视觉强调。
+
+使用 Frames 以一致的样式展示图像、示意图或其他视觉内容，并可选添加说明文字。Frames 会将内容居中，并与周围文本形成清晰的视觉分隔。
+
+可选的 caption 属性为图像添加额外的说明信息。说明文字会显示在图像下方的框中。
+
+可选的 hint 属性添加显示在框架前面的文本。提示会显示在框架上方。
+
+<Frame hint="Hint text" caption="这是一段 Caption text 文本">
+  <img src="/images/hero-light.png" alt="Descriptive alt text" />
+</Frame>

@@ -20,12 +20,6 @@ icon: 'diamonds-4'
   ```
 </Accordion>
 
-```md
-<Accordion title="我是一个折叠面板。" defaultOpen={true} icon="java">
-  您可以在这里放置任何内容，包括其他组件，比如代码
-</Accordion>
-```
-
 
 ## 折叠面板分组
 
@@ -45,18 +39,178 @@ icon: 'diamonds-4'
   </Accordion>
 </AccordionGroup>
 
-```md
-<AccordionGroup>
-  <Accordion title="入门指南" icon="circle-play">
-    您可以在折叠面板内放置其他组件。
-  </Accordion>
+## 徽章
 
-  <Accordion title="高级功能" icon="alien-8bit">
-    添加图标可以让折叠面板更具视觉区分度和易于浏览。
-  </Accordion>
+徽章用于显示状态、标签或重要信息。支持多种尺寸、形状、颜色和图标。
 
-  <Accordion title="故障排除" icon="circle-exclamation">
-    将相关内容组织成组。
-  </Accordion>
-</AccordionGroup>
+### 属性说明
+
+- **尺寸 size**：`xs`、`sm`、`md`、`lg`
+- **形状 shape**：`rounded`（圆角矩形）、`pill`（胶囊形）
+- **图标 icon**：可选的 Font Awesome 图标
+- **颜色 color**：支持 `gray`、`blue`、`green`、`yellow`、`orange`、`red`、`purple`、`white`、`surface`、`white-destructive`、`surface-destructive`
+- **是否禁用 disabled**：`boolean` 类型，控制徽章是否禁用
+
+### 常用示例
+
+#### 状态徽章
+
+<Badge icon="check" color="green" size="sm" shape="pill">已发布</Badge>
+<Badge icon="clock" color="yellow" size="sm" shape="pill">进行中</Badge>
+<Badge icon="circle-xmark" color="red" size="sm" shape="pill">已关闭</Badge>
+<Badge icon="pause" color="gray" size="sm" shape="pill">已暂停</Badge>
+
+#### 版本和标签徽章
+
+<Badge icon="star" color="blue" size="md" shape="pill">高级版</Badge>
+<Badge icon="badge-alert" color="orange" size="md" shape="rounded">测试版</Badge>
+<Badge icon="sparkles" color="purple" size="md" shape="pill">新功能</Badge>
+<Badge icon="fire" color="red" size="md" shape="pill">热门</Badge>
+<Badge icon="lock" color="gray" size="md" shape="rounded">专业版</Badge>
+
+#### 验证和认证徽章
+
+<Badge icon="check" stroke color="green" size="sm" shape="pill">已验证</Badge>
+<Badge icon="shield-check" color="green" size="sm" shape="rounded">安全</Badge>
+<Badge icon="certificate" color="blue" size="sm" shape="pill">认证</Badge>
+<Badge icon="badge-check" color="purple" size="sm" shape="rounded">官方</Badge>
+
+#### 不同尺寸展示
+
+<Badge color="blue" size="xs">XS</Badge>
+<Badge color="blue" size="sm">SM</Badge>
+<Badge color="blue" size="md">MD</Badge>
+<Badge color="blue" size="lg">LG</Badge>
+
+#### 不同形状展示
+
+<Badge color="green" size="md" shape="rounded">圆角矩形</Badge>
+<Badge color="green" size="md" shape="pill">胶囊形</Badge>
+
+#### 不同颜色展示
+
+<Badge color="gray" size="sm">灰色</Badge>
+<Badge color="blue" size="sm">蓝色</Badge>
+<Badge color="green" size="sm">绿色</Badge>
+<Badge color="yellow" size="sm">黄色</Badge>
+<Badge color="orange" size="sm">橙色</Badge>
+<Badge color="red" size="sm">红色</Badge>
+<Badge color="purple" size="sm">紫色</Badge>
+
+#### 无图标徽章
+
+<Badge color="blue" size="md" shape="pill">纯文本</Badge>
+<Badge color="green" size="sm" shape="rounded">简单标签</Badge>
+
+## 标注框
+
+> 使用标注框来为重要内容设定样式并突出显示。
+
+标注框可以使用预设的label设置： Note、Warning、Info、Tip、Check、Danger，或创建你自己的标注框：
+
+<Note>这会在内容中添加一条说明</Note>
+
+
+<Warning>这会触发一个 Warning，提醒注意</Warning>
+
+
+<Info>用于提示关键信息</Info>
+
+
+<Tip>这是一条有用的提示</Tip>
+
+
+<Check>这将使其处于“已选中”状态</Check>
+
+
+<Danger>这是一个危险提示框</Danger>
+
+自定义标注框：
+
+<Callout icon="key" color="#FFC107" iconType="regular"> 这是一个自定义标注</Callout>
+
+```mdx wrap theme={null}
+<Callout icon="key" color="#FFC107" iconType="regular">这是一个自定义标注</Callout>
 ```
+
+## 卡片
+
+> 使用可自定义布局和图标突出显示关键信息或链接。
+
+使用卡片为内容创建可视化容器。卡片是一种灵活的容器，可以包含文本、图标、图片和链接。
+
+### 基础卡片
+
+<Card title="卡片标题" icon="align-left" href="/essentials/markdown">
+  这是带有图标和链接的卡片用法。点击此卡片
+  将跳转到对应页面，url可以为相对文章位置。
+</Card>
+
+### 卡片样式变体
+
+卡片支持多种布局和样式选项，可满足不同的内容需求。
+
+添加 `horizontal` 属性，以更紧凑的水平布局显示卡片。
+
+<Card title="水平卡片" icon="align-left" horizontal>
+  这是一个水平卡片示例。
+</Card>
+
+### 图片卡片
+
+添加一个 `img` 属性即可在卡片顶部显示图片。
+
+<Card title="图片卡片" img="/images/hero-light.png">
+  这是一个带图片的卡片示例。
+</Card>
+
+### 带有自定义 CTA 的链接卡片
+
+可以自定义号召性用语的文本，并控制是否显示箭头。默认情况下，箭头只会显示在外部链接上。
+
+<Card title="链接卡片" icon="link" href="/essentials/markdown" arrow="true" cta="点击这里">
+  这是一个带有图标和链接的卡片示例。点击此卡片会将你带到对应页面。
+</Card>
+
+### 分组卡片
+
+使用 Columns 组件将多个卡片并排排布展示。Columns 组件用于将多个 Card 组件分组展示。它通常通过指定网格列数，将卡片排成网格。
+
+<Columns cols={2}>
+  <Card title="第一张卡片" icon="circle-1">
+    这是第一张卡片。
+  </Card>
+
+  <Card title="第二张卡片" icon="circle-2">
+    这是第二张卡片。
+  </Card>
+</Columns>
+
+举个例子：
+
+<Columns cols={2}>
+  <Card title="开始使用" icon="rocket-launch">
+    使用快速入门指南设置项目。
+  </Card>
+  <Card title="API 参考" icon="code">
+    浏览 API 端点、参数和示例。
+  </Card>
+</Columns>
+
+## 可展开项
+
+> 切换显示嵌套属性
+
+使用可展开项在响应字段中显示或隐藏嵌套内容。可展开项对在 API 文档中展示复杂对象属性尤其有用。
+
+<ResponseField name="user" type="User Object">
+  <Expandable title="properties">
+    <ResponseField name="full_name" type="string">
+      用户的姓名
+    </ResponseField>
+
+    <ResponseField name="is_over_21" type="boolean">
+      用户是否已满 21 岁
+    </ResponseField>
+  </Expandable>
+</ResponseField>

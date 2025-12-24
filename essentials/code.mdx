@@ -16,7 +16,7 @@ To denote a `word` or `phrase` as code, enclose it in backticks (`).
 
 ### 代码块
 
-使用 [围栏代码块](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks)，用三个反引号将代码括起来，并在前导反引号后跟代码片段的编程语言以获得语法高亮。可选地，您也可以在编程语言后写入代码的名称。
+使用 `围栏代码块` 用三个反引号将代码括起来，并在前导反引号后跟代码片段的编程语言以获得语法高亮。可选地，您也可以在编程语言后写入代码的名称。
 
 ```java HelloWorld.java
 class HelloWorld {
@@ -35,3 +35,77 @@ class HelloWorld {
 }
 ```
 ````
+
+
+### 代码分组
+
+> 在单个组件中展示多个代码示例
+
+使用 `CodeGroup` 组件在带有标签页的界面中展示多个代码块，便于用户比较不同编程语言的实现，或查看完成同一任务的替代方案。每个代码块必须包含一个 title，其值将作为标签页的标签。
+
+<CodeGroup>
+  ```javascript helloWorld.js theme={null}
+  console.log("Hello World");
+  ```
+
+  ```python hello_world.py theme={null}
+  print('Hello World!')
+  ```
+
+  ```java HelloWorld.java theme={null}
+  class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello, World!");
+      }
+  }
+  ```
+</CodeGroup>
+
+代码分组将从 `docs.json` 文件继承全局样式。可通过 `styling.codeblocks` 自定义主题。
+
+### 语言下拉菜单
+
+你可以通过使用 `dropdown` 属性，将 CodeGroup 中的选项卡替换为下拉菜单，以在不同语言之间切换。
+
+<CodeGroup dropdown>
+  ```javascript helloWorld.js theme={null}
+  console.log("Hello World");
+  ```
+
+  ```python hello_world.py theme={null}
+  print('Hello World!')
+  ```
+
+  ```java HelloWorld.java theme={null}
+  class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello, World!");
+      }
+  }
+  ```
+</CodeGroup>
+
+## 示例
+
+在桌面设备上将代码块显示在右侧边栏
+
+\<RequestExample\> 和 \<ResponseExample> 组件会在右侧边栏显示代码块，形成双栏布局，使用户在滚动阅读内容时始终能看到示例。这些组件为 API 文档而设计，但适用于所有页面。
+
+常见用例：
+- 带有请求与响应示例的 API 端点文档
+- 与说明性文字并列的配置示例
+- 供用户在按步骤操作时参考的代码示例
+- 教程中的前后对比示例
+
+<RequestExample>
+```bash RequestExample请求
+curl --request POST \
+  --url https://dog-api.kinduff.com/api/facts
+```
+</RequestExample>
+
+<ResponseExample>
+```json 响应
+{ "status": "success" }
+```
+</ResponseExample>

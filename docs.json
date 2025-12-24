@@ -33,6 +33,7 @@
               "essentials/markdown",
               "essentials/component",
               "essentials/code",
+              "essentials/api",
               "essentials/images",
               "essentials/settings",
               "essentials/navigation",
